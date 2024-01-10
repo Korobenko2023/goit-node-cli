@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-hw-01",
+  "name": "goit-node-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0"
   }
 }
