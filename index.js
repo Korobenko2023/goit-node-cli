@@ -1,4 +1,4 @@
-import { program } from "commander";
+const { program } = require("commander");
 program
   .option("-a, --action <type>", "choose action")
   .option("-i, --id <type>", "user id")
@@ -14,7 +14,7 @@ const options = program.opts();
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      // ...
+      const allBooks = await books.getAll();
       break;
 
     case "get":
