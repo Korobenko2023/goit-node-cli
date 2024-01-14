@@ -9,7 +9,6 @@ program
 program.parse();
 
 const options = program.opts();
-
 const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
 
 async function invokeAction({ action, id, name, email, phone }) {
