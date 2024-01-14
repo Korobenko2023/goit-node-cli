@@ -10,23 +10,28 @@ program.parse();
 
 const options = program.opts();
 
-// TODO: рефакторити
+const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
+
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      const allBooks = await books.getAll();
+      const contacts = await listContacts();
+      console.table(contacts);
       break;
 
     case "get":
-      // ... id
+      const contactById = await getContactById(id);
+      console.table(contactById);
       break;
 
     case "add":
-      // ... name email phone
+      const newContact = await addContact(name, email, phone);
+      console.table(newContact);
       break;
 
     case "remove":
-      // ... id
+      const deleteContact = await removeContact(id)
+      console.table(deleteContact);
       break;
 
     default:
